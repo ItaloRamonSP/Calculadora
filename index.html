@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loteria</title>
+    <style>
+        #jogo1 {
+            display: none;
+        }
+        #loteria{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <fieldset>
+                <legend> Hora de Jogar</legend>
+                <div id="numerosSorte"> 
+                    <br>
+                    <label for="numSorte"><h4>Digite a quantidade de números que deseja jogar</h4></label>
+                    <br>
+                        <table border=1 >
+                            <thead>
+                                <tr>
+                                    <th >Quantidade de Números</th>
+                                    <th >Valor da Aposta</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr> 
+                                    <td>6</td>
+                                    <td>2,50</td>
+                                </tr>
+                                <tr> 
+                                    <td>7</td>
+                                    <td>17,50</td>
+                                </tr> 
+                                <tr> 
+                                    <td>8</td>
+                                    <td>70,00</td>
+                                </tr>
+                                <tr> 
+                                    <td>9</td>
+                                    <td>210,00</td>
+                                </tr> 
+                                <tr> 
+                                    <td>10</td>
+                                    <td>525,00</td>
+                                </tr>
+                                <tr> 
+                                    <td>11</td>
+                                    <td>1.155,00</td>
+                                </tr> 
+                                <tr> 
+                                    <td>12</td>
+                                    <td>2.310,00</td>
+                                </tr>
+                                <tr> 
+                                    <td>13</td>
+                                    <td>4.290,00</td>
+                                </tr> 
+                                <tr> 
+                                    <td>14</td>
+                                    <td>7.7507,50</td>
+                                </tr>
+                                <tr> 
+                                    <td>15</td>
+                                    <td>12.512,00</td>
+                                </tr>                                              
+                            </tbody>
+                        </table>
+                        <br><br>
+                    <input type="text" id="numSorte">
+                    <button onclick="escolher()">Começar</button>
+                </div>
+                <div id="jogo1">
+                    <fieldset id="loteria">
+                        <legend>Cartela da Loteria</legend><br>
+                        <div id="cartela">
+
+                            <label for="1">01</label>
+                            <input id="1" name="InNum" type="checkbox" value="1">
+                            &nbsp;  &nbsp;
+
+                            <label for="2">02</label>
+                            <input id="2" name="InNum" type="checkbox" value="2">
+                            &nbsp;  &nbsp;
+
+                            <label for="3">03</label>
+                            <input id="3" name="InNum" type="checkbox" value="3">
+                            &nbsp;  &nbsp;
+
+                            <label for="4">04</label>
+                            <input id="4" name="InNum" type="checkbox" value="4">
+                            &nbsp;  &nbsp;
+
+                            <label for="5">05</label>
+                            <input id="5" name="InNum" type="checkbox" value="5">
+                            &nbsp;  &nbsp;
+
+                            <label for="6">06</label>
+                            <input id="6" name="InNum" type="checkbox" value="6">
+                            &nbsp;  &nbsp;
+
+                            <label for="7">07</label>
+                            <input id="7" name="InNum" type="checkbox" value="7">
+                            &nbsp;  &nbsp;
+
+                            <label for="8">08</label>
+                            <input id="8" name="InNum" type="checkbox" value="8">
+                            &nbsp;  &nbsp;
+
+                            <label for="9">09</label>
+                            <input id="9" name="InNum" type="checkbox" value="9">
+                            &nbsp;  &nbsp;
+
+                            <label for="10">10</label>
+                            <input id="10" name="InNum" type="checkbox" value="10">
+                            <br>
+                            <label for="11">11</label>
+                            <input id="11" name="InNum" type="checkbox" value="11">
+                            &nbsp;  &nbsp;
+
+                            <label for="12">12</label>
+                            <input id="12" name="InNum" type="checkbox" value="12">
+                            &nbsp;  &nbsp;
+
+                            <label for="13">13</label>
+                            <input id="13" name="InNum" type="checkbox" value="13">
+                            &nbsp;  &nbsp;
+
+                            <label for="14">14</label>
+                            <input id="14" name="InNum" type="checkbox" value="14">
+                            &nbsp;  &nbsp;
+
+                            <label for="15">15</label>
+                            <input id="15" name="InNum" type="checkbox" value="15">
+                            &nbsp;  &nbsp;
+
+                            <label for="16">16</label>
+                            <input id="16" name="InNum" type="checkbox" value="16">
+                            &nbsp;  &nbsp;
+
+                            <label for="17">17</label>
+                            <input id="17" name="InNum" type="checkbox" value="17">
+                            &nbsp;  &nbsp;
+
+                            <label for="18">18</label>
+                            <input id="18" name="InNum" type="checkbox" value="18">
+                            &nbsp;  &nbsp;
+
+                            <label for="19">19</label>
+                            <input id="19" name="InNum" type="checkbox" value="19">
+                            &nbsp;  &nbsp;
+
+                            <label for="20">20</label>
+                            <input id="20" name="InNum" type="checkbox" value="20">
+                            <br>
+
+                            <label for="21">21</label>
+                            <input id="21" name="InNum" type="checkbox" value="21">
+                            &nbsp;  &nbsp;
+
+                            <label for="22">22</label>
+                            <input id="22" name="InNum" type="checkbox" value="22">
+                            &nbsp;  &nbsp;
+
+                            <label for="23">23</label>
+                            <input id="23" name="InNum" type="checkbox" value="23">
+                            &nbsp;  &nbsp;
+
+                            <label for="24">24</label>
+                            <input id="24" name="InNum" type="checkbox" value="24">
+                            &nbsp;  &nbsp;
+
+                            <label for="25">25</label>
+                            <input id="25" name="InNum" type="checkbox" value="25">
+                            &nbsp;  &nbsp;
+
+                            <label for="26">26</label>
+                            <input id="26" name="InNum" type="checkbox" value="26">
+                            &nbsp;  &nbsp;
+
+                            <label for="27">27</label>
+                            <input id="27" name="InNum" type="checkbox" value="27">
+                            &nbsp;  &nbsp;
+
+                            <label for="28">28</label>
+                            <input id="28" name="InNum" type="checkbox" value="28">
+                            &nbsp;  &nbsp;
+
+                            <label for="29">29</label>
+                            <input id="29" name="InNum" type="checkbox" value="29">
+                            &nbsp;  &nbsp;
+
+                            <label for="30">30</label>
+                            <input id="30" name="InNum" type="checkbox" value="30">
+                            <br>
+
+                        
+
+                        </div>
+                    </fieldset>
+
+                    
+                    <button onclick="executar()">Jogar</button>
+                </div>
+            </fieldset>
+        </section>
+    </main>
+    <script>
+        function escolher(){
+            //pega a quantidade de números que o usuário deseja jogar e troca o display das divs
+            var numJogo = Number(document.getElementById("numSorte").value);
+            console.log(numJogo)
+            document.getElementById("numerosSorte").style.display = "none";
+            document.getElementById("jogo1").style.display = "block";
+        }
+        function executar(){
+
+            var sorte;
+            var jogo = [1,22,53,8,10,17,42,37,45,21,3,7,14,11,20];
+            var tentativas = 0;
+            var contador = 0;
+            var numJogo = Number(document.getElementById("numSorte").value);
+            
+            console.log(numJogo)
+
+            var timeStart = performance.now();
+
+            do{
+                
+                var sorteado = [];
+
+               //gera o numero do sorteio 
+               for(let x=0; x<6; x++){
+                sorte = Math.floor(Math.random()*60);
+
+                    //certifica para não repetir numeros
+                    while(sorteado.includes(sorte)){
+                    sorte = Math.round(Math.random() * 60);
+                    }
+                    sorteado.push(sorte);
+                }
+                // Exibe numeros de tentativas e o numero sorteado a cada tentativa
+                tentativas++;
+                //console.log(tentativas);
+                //console.log(sorteado); <!--exibe os numeros sorteados a cada rodada-->
+                //console.log("");
+
+                //testa para ver se o numero sorteado é igual ao do usuário
+                contador = 0;
+                for(let t = 0; t<numJogo ; t++){
+                    for(let y = 0; y < 6 ; y++){
+
+                        if(sorteado[y]==jogo[t]){
+                            contador++;
+                        }
+                        
+                    }
+                }    
+            }
+
+            while(contador<numJogo)
+            
+            //calcula o tempo para achar o numero sorteado
+            var timeEnd = performance.now();
+            let tempo = (timeEnd - timeStart)/1000;
+            console.log("Duration " + tempo.toFixed(2) + " segundos");
+            console.log(sorteado);
+            console.log(jogo);
+        }
+    </script>
+</body>
+</html>
