@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+        #visor{
+            border:black;
+            border:solid;
+            border: 4px;
+        }
+        div{
+            position: absolute;
+            top: 40px;
+            left: 550px;
+            padding: 30px;
+            background-color:rgb(226, 226, 211);
+        }
+        #igual{
+            width: 40px;
+            height: 100px;
+            position: absolute;
+        }
+        
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body background="fundo.jpg">
+    <form action="" name="calculadora">
+        <div>
+            <input type="text" name="visor" id="input">
+            <br><br>
+            <button type="button" class="btn btn-outline-danger" onclick="apaga()"> C </button>
+            &nbsp;
+            <button type="button" class="btn btn-outline-danger" onclick="limpar()"> &lArr; </button>
+            &nbsp;
+            <button type="button" class="btn btn-outline-warning" value="/" onclick="add(value)"> / </button>
+            &nbsp;
+            <button type="button" class="btn btn-outline-warning" value="*" onclick="add(value)"> * </button>
+            <br><br>
+
+            <button type="button" class="btn btn-outline-primary" value="7" onclick="add(value)"> 7 </button>
+            &nbsp;&nbsp;
+            <button type="button" class="btn btn-outline-primary" value="8" onclick="add(value)"> 8 </button>
+            &nbsp;
+            <button type="button" class="btn btn-outline-primary" value="9" onclick="add(value)"> 9 </button>
+            &nbsp;
+            <button type="button" class="btn btn-outline-warning" value="-" onclick="add(value)"> - </button>
+            <br><br>
+
+            <button type="button" class="btn btn-outline-primary" value="4" onclick="add(value)"> 4 </button>
+            &nbsp;&nbsp;
+            <button type="button" class="btn btn-outline-primary" value="5" onclick="add(value)"> 5 </button>
+            &nbsp;
+            <button type="button" class="btn btn-outline-primary" value="6" onclick="add(value)"> 6 </button>
+            &nbsp;
+            <button type="button" class="btn btn-outline-warning" value="+" onclick="add(value)"> + </button>
+            <br><br>
+
+            <button type="button" class="btn btn-outline-primary" value="1" onclick="add(value)"> 1 </button>
+            &nbsp;&nbsp;
+            <button type="button" class="btn btn-outline-primary" value="2" onclick="add(value)"> 2 </button>
+            &nbsp;
+            <button type="button" class="btn btn-outline-primary" value="3" onclick="add(value)"> 3 </button>
+            &nbsp;
+            <button type="button" class="btn btn-outline-success" id="igual" onclick="resul()"> = </button>
+            <br><br>
+
+            <button type="button" class="btn btn-outline-warning"  onclick="simbolo()"> +/- </button>
+            <button type="button" class="btn btn-outline-primary" value="0" onclick="add(value)"> 0 </button>
+            &nbsp;
+            <button type="button" class="btn btn-outline-primary" value="." onclick="add(value)"> . </button>
+            
+    
+        </div>
+    </form>
+    <script>
+        var valor;
+        function add(num){
+            valor = document.calculadora.visor.value += num;
+        }
+        function apaga(){
+            document.calculadora.visor.value = " ";
+        }
+        function resul(){
+            var resultado = eval(valor);
+            document.calculadora.visor.value = resultado;
+        }
+        function simbolo(){
+            var troca = document.calculadora.visor.value;
+            troca = troca*(-1);
+            document.calculadora.visor.value = troca;
+        }
+        function limpar(){
+            
+        let input = document.getElementById('input');
+        let inputText = input.value;
+        input.value = inputText.substring(0,inputText.length-1);
+
+        }
+    </script>
+</body>
+</html>
